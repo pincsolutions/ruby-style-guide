@@ -788,6 +788,8 @@ in *Ruby* now, not in *Python*.
 * Don't suppress exceptions.
 * Don't use exceptions for flow of control.
 * Avoid rescuing the `Exception` class.
+* Every rescue clause should log something, sweeping errors under the rug makes maintenance more difficult.
+ 
 
 ## Collections
 
