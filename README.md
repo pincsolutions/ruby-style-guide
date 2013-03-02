@@ -808,15 +808,15 @@ strings in the case that it fits on one line.
 
     ```Ruby
     # bad
-    STATES = %w( Alabama Alaska American Samoa Arizona Arkansas California Colorado
-                 North Dakota Northern Marianas Islands Ohio Oklahoma Oregon
+    STATES = %w( Alabama Alaska AmericanSamoa Arizona Arkansas California Colorado
+                 NorthDakota NorthernMarianasIslands Ohio Oklahoma Oregon
                  Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland
                  Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska
-                 Pennsylvania Puerto Rico Rhode Island South Carolina South Dakota
-                 Tennessee Texas Utah Vermont Virginia Virgin Islands Washington West
-                 Nevada New Hampshire New Jersey New Mexico New York North Carolina
-                 Connecticut Delaware District of Columbia Florida Georgia Guam Hawaii
-                 Virginia Wisconsin Wyoming )
+                 Pennsylvania PuertoRico RhodeIsland SouthCarolina SouthDakota
+                 Tennessee Texas Utah Vermont Virginia VirginIslands Washington
+                 Nevada NewHampshire NewJersey NewMexico NewYork NorthCarolina
+                 Connecticut Delaware DistrictofColumbia Florida Georgia Guam Hawaii
+                 WestVirginia Wisconsin Wyoming )
 
     # good
     STATES = [
