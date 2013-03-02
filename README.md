@@ -794,7 +794,7 @@ in *Ruby* now, not in *Python*.
 ## Collections
 
 * Prefer `%w` to the literal array syntax when you need an array of
-strings.
+strings in the case that it fits on one line.
 
     ```Ruby
     # bad
@@ -802,6 +802,81 @@ strings.
 
     # good
     STATES = %w(draft open closed)
+    ```
+
+* If the array is longer than one line, put each element on one line, and order them as appropriate to make readable and maintainable.
+
+    ```Ruby
+    # bad
+    STATES = %w( Alabama Alaska American Samoa Arizona Arkansas California Colorado
+                 North Dakota Northern Marianas Islands Ohio Oklahoma Oregon
+                 Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland
+                 Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska
+                 Pennsylvania Puerto Rico Rhode Island South Carolina South Dakota
+                 Tennessee Texas Utah Vermont Virginia Virgin Islands Washington West
+                 Nevada New Hampshire New Jersey New Mexico New York North Carolina
+                 Connecticut Delaware District of Columbia Florida Georgia Guam Hawaii
+                 Virginia Wisconsin Wyoming )
+
+    # good
+    STATES = [
+              "Alabama",
+              "Alaska",
+              "American Samoa",
+              "Arizona",
+              "Arkansas",
+              "California",
+              "Colorado",
+              "Connecticut",
+              "Delaware",
+              "District of Columbia",
+              "Florida",
+              "Georgia",
+              "Guam",
+              "Hawaii",
+              "Idaho",
+              "Illinois",
+              "Indiana",
+              "Iowa",
+              "Kansas",
+              "Kentucky",
+              "Louisiana",
+              "Maine",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "Minnesota",
+              "Mississippi",
+              "Missouri",
+              "Montana",
+              "Nebraska",
+              "Nevada",
+              "New Hampshire",
+              "New Jersey",
+              "New Mexico",
+              "New York",
+              "North Carolina",
+              "North Dakota",
+              "Northern Marianas Islands",
+              "Ohio",
+              "Oklahoma",
+              "Oregon",
+              "Pennsylvania",
+              "Puerto Rico",
+              "Rhode Island",
+              "South Carolina",
+              "South Dakota",
+              "Tennessee",
+              "Texas",
+              "Utah",
+              "Vermont",
+              "Virginia",
+              "Virgin Islands",
+              "Washington",
+              "West Virginia",
+              "Wisconsin",
+              "Wyoming",
+             ]
     ```
 
 * Avoid the creation of huge gaps in arrays.
